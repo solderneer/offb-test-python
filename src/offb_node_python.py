@@ -37,6 +37,7 @@ def main():
 
 	# Wait for connected state
 	while not rospy.is_shutdown() and not current_state.connected:
+		print current_state.connected
 		rate.sleep()
 
 	pose = PoseStamped()

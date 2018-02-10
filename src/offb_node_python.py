@@ -20,7 +20,7 @@ def main():
 	local_pos_pub = rospy.Publisher('mavros/setpoint_position/local', PoseStamped, queue_size=10)
 
 	# Connect to arming client
-	rospy.wait_for_service('mavros/cmd/arming');
+	rospy.wait_for_service('mavros/cmd/arming')
 	try:
 		arming_client = rospy.ServiceProxy('mavros/cmd/arming', CommandBool)
 	except rospy.ServiceException, e:
